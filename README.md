@@ -52,9 +52,7 @@ WeLife/
 ├── vite.config.js
 └── README.md
 🚀 本機安裝與開發流程
-bash
-複製
-編輯
+
 # 1️⃣ 下載專案
 git clone https://github.com/SoNewGameRB/WeLife.git
 cd WeLife
@@ -78,9 +76,7 @@ backend-api	🧠 席 / 祐丞：後端功能整合
 
 🔁 Git 開發流程（圖文補教等級 🧠）
 ✅ 【第一次開發流程】
-bash
-複製
-編輯
+
 # 🧭 1. 從 GitHub 下載整個專案（只做一次）
 git clone https://github.com/SoNewGameRB/WeLife.git
 cd WeLife
@@ -91,9 +87,7 @@ npm install
 # 🚀 3. 建立自己的分支（只做一次）
 git checkout -b feature-movie  # 👈 把 feature-movie 改成你自己要負責的模組
 ✅ 【之後每次開工前】
-bash
-複製
-編輯
+
 # 🧼 更新 main 分支，確保最新
 git checkout main
 git pull origin main
@@ -101,9 +95,7 @@ git pull origin main
 # 🔁 回到自己的分支
 git checkout feature-movie
 ✅ 【開始寫程式後要怎麼送上 GitHub？】
-bash
-複製
-編輯
+
 # ✅ 1. 查看你改了哪些檔案（可以不用打，但習慣好）
 git status
 
@@ -137,9 +129,7 @@ chore:	工具設定 / 套件升級
 
 🧠 範例：
 
-bash
-複製
-編輯
+
 git commit -m "feat: 加入旅遊景點卡片區塊"
 git commit -m "fix: 修正個人頁面照片上傳錯誤"
 🧯 常見錯誤提醒
