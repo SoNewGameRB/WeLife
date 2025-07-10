@@ -1,0 +1,104 @@
+.text-gradient {
+  background: linear-gradient(90deg, #ff6ec4 0%, #7873f5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-tag {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.hover-shadow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.transition {
+  transition: all 0.3s ease-in-out;
+}
+
+.focus-ring:focus {
+  border-color: #7873f5;
+  box-shadow: 0 0 0 0.25rem rgba(120, 115, 245, 0.25);
+}
+
+.soft-shadow {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.hover-shadow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+.transition {
+  transition: all 0.3s ease;
+}
+
+
+.hover-shadow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.transition {
+  transition: all 0.3s ease-in-out;
+}
+
+.list-group-item-action:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.travel-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.travel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
+}
+
+.bg-gradient {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+  pointer-events: none;
+}
+.hover-shadow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.transition {
+  transition: all 0.3s ease-in-out;
+}
+/* 高亮動畫底線效果 */
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 70%;
+  height: 2px;
+  background-color: #ffffff;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover::after,
+.nav-link.active-link::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* 高亮 active 狀態 */
+.nav-link.active-link {
+  color: #ffc107 !important;
+  font-weight: bold;
+}

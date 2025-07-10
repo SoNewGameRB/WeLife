@@ -23,28 +23,40 @@ const articles = [
 
 const Explore = () => {
   return (
-    <div className="container py-4">
-      <h2 className="mb-3 fw-bold text-primary">📚 資訊探索</h2>
-      <p className="text-muted">
+    <div className="container py-5">
+      <h2 className="mb-3 fw-bold text-primary fs-2">
+        📚 <span className="text-gradient">資訊探索</span>
+      </h2>
+      <p className="text-muted fs-5">
         精選主題文章、生活洞察、Z 世代正在關注的事。
       </p>
 
       {/* 🔍 搜尋欄 */}
-      <div className="input-group my-4">
-        <input type="text" className="form-control" placeholder="🔍 搜尋文章關鍵字..." />
-        <button className="btn btn-outline-primary" type="button">搜尋</button>
+      <div className="input-group my-4 shadow-sm">
+        <input
+          type="text"
+          className="form-control focus-ring"
+          placeholder="🔍 搜尋文章關鍵字..."
+        />
+        <button className="btn btn-outline-primary" type="button">
+          搜尋
+        </button>
       </div>
 
       {/* 🧠 主題文章列表 */}
       <div className="row g-4">
-        {articles.map(article => (
+        {articles.map((article) => (
           <div key={article.id} className="col-12 col-md-6 col-lg-4">
-            <div className="card h-100 shadow-sm border-0">
+            <div className="card h-100 border-0 shadow-sm hover-shadow transition">
               <div className="card-body d-flex flex-column">
-                <span className="badge bg-secondary mb-2">{article.tag}</span>
+                <span className="badge rounded-pill mb-2 bg-gradient-tag">
+                  {article.tag}
+                </span>
                 <h5 className="card-title">{article.title}</h5>
                 <p className="card-text text-muted">{article.description}</p>
-                <button className="btn btn-sm btn-outline-dark mt-auto">🔗 閱讀更多</button>
+                <button className="btn btn-sm btn-outline-dark mt-auto transition">
+                  🔗 閱讀更多
+                </button>
               </div>
             </div>
           </div>
@@ -52,8 +64,8 @@ const Explore = () => {
       </div>
 
       {/* 💬 底部互動提示 */}
-      <div className="alert alert-info text-center mt-5">
-        💬 想留言嗎？未來將開放文章互動功能，敬請期待！
+      <div className="alert alert-info text-center mt-5 soft-shadow bg-opacity-75">
+        💬 想留言嗎？<strong>未來將開放文章互動功能</strong>，敬請期待！
       </div>
     </div>
   )

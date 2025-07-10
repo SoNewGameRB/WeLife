@@ -1,11 +1,13 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4 sticky-top shadow-sm">
       <div className="container-fluid">
-        <Link className="navbar-brand fw-bold" to="/">WeLife</Link>
+        <Link className="navbar-brand fw-bold fs-4" to="/">
+          WeLife
+        </Link>
 
         <button
           className="navbar-toggler"
@@ -18,21 +20,24 @@ const Navbar = () => {
 
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <NavLink to="/" className="nav-link">🏠 首頁</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/movie" className="nav-link">🎬 電影</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/travel" className="nav-link">🏖️ 旅遊</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/explore" className="nav-link">📚 探索</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/profile" className="nav-link">👤 個人</NavLink>
-            </li>
+            {[
+              { path: '/', label: '🏠 首頁' },
+              { path: '/movie', label: '🎬 電影' },
+              { path: '/travel', label: '🏖️ 旅遊' },
+              { path: '/explore', label: '📚 探索' },
+              { path: '/profile', label: '👤 個人' }
+            ].map((item, idx) => (
+              <li className="nav-item" key={idx}>
+                <NavLink
+                  to={item.path}
+                  className={({ isActive }) =>
+                    `nav-link px-3 fw-medium ${isActive ? 'active-link' : 'text-light'}`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
